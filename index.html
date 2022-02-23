@@ -18,21 +18,24 @@
 </head>
 <body>
 
-  <header>
+  <header class="header">
     <img src="./images/logo.svg" alt="" class="header__img">
   </header>
   <section class="coming-soon">
-    <img src="./images/hero-mobile.jpg" alt="">
-    <div class="coming-soon__content">
+    <div class="coming-soon__item">
+      <img  class="coming-soon__img1" src="./images/hero-mobile.jpg" alt="">
+      <img  class="coming-soon__img2" src="./images/hero-desktop.jpg" alt="">
+    </div>
+    <div class="coming-soon__content coming-soon__item-2">
       <h1><span>We're</span> coming soon</h1>
       <p>
         Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
 
-      <div class="coming-soon__email-space">
-        <input class="coming-soon__email" type="text" id="email" name="email" placeholder="Email Address">
-        <div class="coming-soon__button comming-soon__button--active">
+      <div class="coming-soon__email-space ">
+        <input class="coming-soon__email comming-soon__email--error" type="text" id="email" name="email" placeholder="Email Address">
+        <div class="coming-soon__button ">
           <img src="./images/icon-arrow.svg" alt="">
         </div>
       </div>

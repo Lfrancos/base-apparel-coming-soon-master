@@ -19,10 +19,8 @@ p {
 }
 
 body {
-    // padding: 1rem;
     margin: 0 auto;
-    // background-color: $gradient2;
-    background-image: linear-gradient( hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 
 }
 .header {
@@ -36,6 +34,9 @@ body {
     margin: 0 auto;
     max-width: 500px;
     min-width: 375px;
+    &__img2 {
+        display: none;
+    }
     &__content {
         padding: 4rem 2rem;
         margin: 0 auto;
@@ -55,6 +56,10 @@ body {
         background-color: transparent;
         min-height: 48px;
         padding-left: 2rem;
+        &:focus {
+            border-color: $color-Desaturated-Red;
+            outline: red;
+        }
         &::placeholder {
             color: $color-Desaturated-Red;
         }
@@ -67,6 +72,7 @@ body {
         height: 100%;
         width: 64px;
         background-image: linear-gradient(135deg, hsl(0, 80%, 86%) , hsl(0, 74%, 74%));
+        cursor: pointer;
         img {
             position: absolute;
             width: 10px;
@@ -74,5 +80,85 @@ body {
             left: 50%;
             transform: translate(-50%, -50%);
         }
+    }
+}
+footer {
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    bottom: 0;
+}
+
+@media screen and (min-width: 1100px) {
+    .header {
+        position: absolute;
+        z-index: 2;
+        top: 3rem;
+        margin-left: 10%;
+        &__img {
+            min-width: 157px;
+            max-width: 157px;
+        }
+    }
+    h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .coming-soon {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        max-width: 1440px;
+        align-items: center;
+        min-height: 700px;
+
+        &__img1 {
+            display: none;
+        }
+        &__img2 {
+            display: none;
+            position: absolute;
+            height: 100%;
+            top: 0;
+
+        }
+        &__content {
+            width: fit-content;
+            text-align: left;
+            padding: 0;
+        }
+        &__item {
+            overflow: hidden;
+            height: 100vh;
+            flex-grow: 0;
+            width: 500px;
+            background-image: url(../images/hero-desktop.jpg) ;
+            background-position: top;
+            // background-position: top 0px;
+            background-position-x: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 500px;
+        }
+        &__item-2 {
+            width: 70%;
+            flex-grow: 10;
+            margin: 0;
+            margin-left: 15%;
+        }
+        &__button {
+            width: 100px;
+            &:hover {
+                // height: 110%;
+                background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 90%));
+            }
+        }
+    }
+    footer {
+        right: 23%;
     }
 }
