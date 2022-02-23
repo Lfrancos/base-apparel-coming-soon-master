@@ -1,0 +1,78 @@
+html {
+    font-family: $font;
+    color: $color-Desaturated-Red;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 1rem;
+    line-height: 2.3rem;;
+    span {
+        font-weight: 300;;
+        color: $color-Desaturated-Red;
+    }
+}
+p {
+    font-size: 0.875rem;
+}
+
+body {
+    // padding: 1rem;
+    margin: 0 auto;
+    // background-color: $gradient2;
+    background-image: linear-gradient( hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+
+}
+.header {
+    &__img {
+        max-width: 100px;
+        margin: 2rem 2rem;
+    }
+}
+.coming-soon {
+
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 375px;
+    &__content {
+        padding: 4rem 2rem;
+        margin: 0 auto;
+        max-width: 400px;
+        text-align: center;
+        p {
+            margin: 2rem 0;
+        }
+    }
+    &__email-space {
+        position: relative;
+    }
+    &__email {
+        border: 1px solid $color-Desaturated-Red;
+        width: 100%;
+        border-radius: 2rem;
+        background-color: transparent;
+        min-height: 48px;
+        padding-left: 2rem;
+        &::placeholder {
+            color: $color-Desaturated-Red;
+        }
+    }
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 2rem;
+        height: 100%;
+        width: 64px;
+        background-image: linear-gradient(135deg, hsl(0, 80%, 86%) , hsl(0, 74%, 74%));
+        img {
+            position: absolute;
+            width: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
