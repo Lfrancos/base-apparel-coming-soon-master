@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/main.css">
-
+  <script src="./script.js" defer></script>
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <style>
@@ -33,16 +33,14 @@
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
 
-      <div class="coming-soon__email-space ">
-        <input class="coming-soon__email coming-soon__email--error" type="text" id="email" name="email" placeholder="Email Address">
-        <div class="coming-soon__error-img">
-          <img src="./images/icon-error.svg" alt="">
-        </div>
-        <div class="coming-soon__button ">
+      <form class="coming-soon__email-space ">
+        <input class="coming-soon__email " type="text" id="email" name="email" placeholder="Email Address">
+
+        <button type="submit" class="coming-soon__button ">
           <img src="./images/icon-arrow.svg" alt="">
-        </div>
-      </div>
-      <p class="coming-soon__text-error">Please provide a valid email</p>
+        </button>
+      </form>
+
     </div>
   </section>
 
