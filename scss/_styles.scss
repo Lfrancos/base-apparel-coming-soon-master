@@ -16,6 +16,7 @@ h1 {
 }
 p {
     font-size: 0.875rem;
+    margin: 2rem 0;
 }
 
 body {
@@ -42,12 +43,10 @@ body {
         margin: 0 auto;
         max-width: 400px;
         text-align: center;
-        p {
-            margin: 2rem 0;
-        }
     }
     &__email-space {
         position: relative;
+
     }
     &__email {
         border: 1px solid $color-Desaturated-Red;
@@ -56,6 +55,13 @@ body {
         background-color: transparent;
         min-height: 48px;
         padding-left: 2rem;
+        &--error {
+            border: 2px solid red;
+            color: red;
+            &::placeholder {
+                color: red;
+            }
+        }
         &:focus {
             border-color: $color-Desaturated-Red;
             outline: red;
@@ -63,6 +69,13 @@ body {
         &::placeholder {
             color: $color-Desaturated-Red;
         }
+    }
+    &__error-img {
+        position: absolute;
+        top: 50%;
+        right: 80px;
+        transform: translate(0, -50%);
+        max-width: 40px;
     }
     &__button {
         position: absolute;
@@ -80,6 +93,14 @@ body {
             left: 50%;
             transform: translate(-50%, -50%);
         }
+    }
+    &__text-error {
+        font-size: 0.8125rem;
+        color: red;
+        margin: 0;
+        margin-left: 1rem;
+        margin-top: .2rem;
+        text-align: left;
     }
 }
 footer {
@@ -149,6 +170,9 @@ footer {
             flex-grow: 10;
             margin: 0;
             margin-left: 15%;
+        }
+        &__error-img {
+            right: 120px;
         }
         &__button {
             width: 100px;
